@@ -1,0 +1,42 @@
+.home {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border-radius: 5%;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .figure-container {
+        flex: 1;
+        max-width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        figcaption {
+            color: #f3f5f8;
+        }
+    }
+
+    figcaption,
+    p {
+        text-align: center;
+    }
+
+    p {
+        color: #bbbfc5;
+    }
+}

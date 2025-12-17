@@ -1,0 +1,192 @@
+@import '../styles/variables';
+
+.phantom-experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-xxl $spacing-large;
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+}
+
+.article-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-large;
+  max-width: 50rem;
+}
+
+.title-experience {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.description-experience {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+.discover-button {
+  background-color: $accent-color;
+  color: $primary-color;
+  border: none;
+  padding: $spacing-medium $spacing-xl;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: $border-radius;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.conheca {
+  padding: $spacing-xxl $spacing-large;
+  background-color: $secondary-color;
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xxl;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.caixa-principal,
+.caixa-exceptional {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: $border-radius-card;
+  }
+
+  .caixa-interior,
+  .caixa-texto-performance {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.7;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-small;
+
+    li {
+      color: $text-secondary;
+      position: relative;
+      padding-left: $spacing-large;
+
+      &::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.select-your-phantom {
+  padding: $spacing-xxl $spacing-large;
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-medium;
+  }
+
+  .description-choose {
+    font-size: 1.1rem;
+    color: $text-secondary;
+    max-width: 40rem;
+    margin: 0 auto $spacing-xl;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-large;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #111;
+  border-radius: $border-radius-card;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: $spacing-large;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      color: $accent-color;
+      font-weight: 600;
+      margin-bottom: $spacing-large;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    button {
+      margin-top: auto;
+      background-color: $accent-color;
+      color: $primary-color;
+      border: none;
+      padding: $spacing-medium 0;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}

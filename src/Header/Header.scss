@@ -1,0 +1,72 @@
+@import '../styles/variables';
+
+header {
+  height: 15vh;
+  font-family: $font-family;
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box-header {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-medium;
+    color: $secondary-color;
+
+    .principal-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $secondary-color;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $secondary-color;
+    }
+  }
+
+  nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-medium;
+
+    .menu-header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .sign-out {
+      background-color: transparent;
+      color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: $border-radius;
+      padding: $spacing-small $spacing-large;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+      }
+    }
+  }
+}
