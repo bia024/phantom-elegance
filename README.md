@@ -10,7 +10,7 @@
 
 ## 🚀 Demo ao Vivo
 
-**[Acesse a demonstração ao vivo aqui!](hhttps://phantom-elegance.vercel.app/)**
+**[Acesse a demonstração ao vivo aqui!](https://phantom-elegance.vercel.app/)**
 
 ---
 
