@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![Phantom Showcase](https://via.placeholder.com/1200x600.png?text=Demonstração+do+Projeto+Phantom)
+![Demonstração do Projeto Phantom](image.png)
 
 > Uma landing page moderna e imersiva, projetada para apresentar um produto de luxo com elegância e interatividade. Este projeto demonstra habilidades em desenvolvimento front-end com React, SASS e foco em uma experiência de usuário sofisticada.
 
