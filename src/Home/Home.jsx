@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <>
       <ImageCarousel />
-      <section className="model-selection-section">
+      <section id="car-models-section" className="model-selection-section">
         <Swiper
           modules={[Navigation]}
           navigation

@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 
 .contact-section {
   width: 100%;
@@ -146,5 +146,34 @@
       color: #b1aeae;
       margin-bottom: $spacing-xs;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: $spacing-large;
+    background-position: top;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: $spacing-large;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    flex: none;
+    padding: $spacing-large;
+  }
+
+  .map-container {
+    .leaflet-container {
+      height: 14rem;
+    }
+  }
+
+  .site-visit-article {
+    padding: $spacing-medium;
   }
 }

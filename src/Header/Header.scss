@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 
 header {
   height: 15vh;
@@ -57,15 +57,62 @@ header {
       color: $secondary-color;
       border: 1px solid $secondary-color;
       border-radius: $border-radius;
-      padding: $spacing-small $spacing-large;
+      /* match hero button sizing */
+      padding: 0.85rem 1.75rem;
+      min-width: 160px;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: box-shadow 400ms ease, background-color 400ms ease, transform 1200ms cubic-bezier(0.22, 0.8, 0.22, 1);
+      will-change: transform;
 
       &:hover {
         background-color: $accent-color;
         border-color: $accent-color;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    height: auto;
+    padding: $spacing-small $spacing-large;
+
+    .box-header {
+      width: 100%;
+      flex-direction: column;
+      gap: $spacing-small;
+      padding: $spacing-small 0;
+
+      .principal-title {
+        font-size: 1.4rem;
+      }
+
+      p { font-size: 0.9rem; }
+    }
+
+    nav {
+      width: 100%;
+      margin-top: $spacing-small;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-small;
+
+      .menu-header {
+        width: 100%;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: $spacing-small;
+        flex-wrap: wrap;
+      }
+
+      .sign-out {
+        min-width: auto;
+        width: 100%;
+        max-width: 320px;
+        padding: 0.75rem 1.25rem;
       }
     }
   }

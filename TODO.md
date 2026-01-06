@@ -1,8 +1,3 @@
-# TODO: Refactor to Professional Architecture
-
-## Tasks
-- [x] Fix 'class' to 'className' in src/Header/Header.jsx
-- [x] Fix 'class' to 'className' in src/Hero/Hero.jsx
-- [x] Fix 'class' to 'className' in src/Experience/Experience.jsx
-- [x] Ensure consistent formatting across all JSX files
-- [x] Test the application to ensure layout remains identical and no errors
+- [x] Modify Hero.jsx to accept button3Text and onButton3Click props, and render a third button if provided.
+- [ ] Update App.jsx to pass button3Text="start 16 ROLLS ROYCE DAWN CONVERSÍVEL INTERRUPTOR DE TOQUE FRONTAL MÓDULO DE CONTROLE JOYSTICK" and a placeholder onButton3Click handler.
+- [ ] Update Hero.scss to style all Hero buttons with luxurious Rolls-Royce aesthetic: dark backgrounds, metallic borders, subtle glows, 3D depth, uppercase text, elegant typography, circular/rounded shapes, inner shadows, outer glows, engraved text effects.

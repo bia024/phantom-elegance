@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 
 .elegance-carousel-section {
     padding: $spacing-xxl $spacing-large;
@@ -19,7 +19,7 @@
 }
 
 .phantom-carousel {
-    max-width: 75rem;
+    max-width: $container-max-width;
     margin: 0 auto;
     border-radius: $border-radius-card;
     overflow: hidden;
@@ -28,13 +28,14 @@
     .carousel-slide-content {
         position: relative;
         width: 100%;
-        height: 65vh;
+        height: clamp(280px, 65vh, 700px);
     }
 
     .swiper-slide img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: center;
     }
 
     .carousel-text-overlay {
@@ -221,4 +222,48 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+.gallery-modal-overlay {
+    padding: $spacing-large;
+}
+
+.gallery-modal-content {
+    position: relative;
+    background-color: #111;
+    padding: $spacing-xl;
+    border-radius: $border-radius-card;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: min(1200px, 100%);
+    color: $secondary-color;
+    text-align: center;
+}
+
+.gallery-swiper {
+    .swiper-slide img {
+        max-height: clamp(180px, 60vh, 65vh);
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: $bp-md) {
+    .elegance-carousel-section {
+        padding: $spacing-large 1rem;
+
+        .carousel-title { font-size: 1.6rem; }
+        .carousel-subtitle { font-size: 0.95rem; }
+    }
+
+    .phantom-carousel {
+        .carousel-slide-content { height: 40vh; }
+
+        .carousel-text-overlay { text-align: center; padding: $spacing-medium; }
+    }
+
+    .model-cards-carousel {
+        .swiper-slide { width: min(320px, 90%); height: auto; }
+    }
+
+    .gallery-modal-content { padding: $spacing-medium; }
 }

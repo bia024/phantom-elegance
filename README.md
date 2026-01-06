@@ -99,7 +99,7 @@ src/
 
 Desenvolvido com ❤️ por **Bianca Caetano**, estudante de Engenharia de Software.
 
-[LinkedIn](https://www.linkedin.com/in/bia-caetano-808065222) | [GitHub](https://github.com/bia024/)
+[LinkedIn](www.linkedin.com/in/bia-caetano) | [GitHub](https://github.com/bia024/)
 
 ---
 

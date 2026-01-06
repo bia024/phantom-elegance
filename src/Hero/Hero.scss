@@ -1,9 +1,11 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
+@use 'sass:color';
 
 .banner-hero {
   font-family: $font-family;
   width: 100%;
-  height: 100vh;
+  min-height: 70vh;
+  padding: 3.5rem 1rem;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.7)),
@@ -17,6 +19,9 @@
   justify-content: center;
 
   .article-hero {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 1.75rem;
 
     h1,
     .discoverHero {
@@ -25,29 +30,120 @@
 
     h1 {
       font-size: 2.5rem;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .discoverHero {
+      font-size: 1.1rem;
     }
   }
 
-  div {
+  .hero-cta {
     display: flex;
     gap: $spacing-small;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
     button {
-      width: 15vw;
-      font-weight: 600;
-      border-radius: $border-radius;
+      min-width: 200px;
+      width: auto;
+      max-width: 400px;
+      padding: 1rem 2rem;
+      font-family: 'Times New Roman', serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.6s ease-in-out;
+      will-change: transform, box-shadow;
+      transform: translateY(0);
+      outline: none;
+      position: relative;
+      overflow: hidden;
+
+      // Piano black background
+      background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+      // Metallic chrome border
+      // border: 2px solid;
+      // border-image: linear-gradient(45deg, #c0c0c0, #ffffff, #c0c0c0) 1;
+      // Inner shadow for depth
+      box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.1),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+
+      // Engraved text effect
+      color: #e0e0e0;
+      text-shadow:
+        1px 1px 0px rgba(0, 0, 0, 0.8),
+        -1px -1px 0px rgba(255, 255, 255, 0.1);
+
+      &:hover, &:focus-visible {
+        // Subtle outer glow
+        box-shadow:
+          inset 0 2px 4px rgba(255, 255, 255, 0.1),
+          inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+          0 8px 16px rgba(192, 192, 192, 0.2),
+          0 0 20px rgba(255, 255, 255, 0.1);
+        // Slight lift effect
+        transform: translateY(-2px);
+        // Enhanced metallic border
+        // border-image: linear-gradient(45deg, #e0e0e0, #ffffff, #e0e0e0) 1;
+      }
+
+      &:active {
+        // Pressed effect with more depth
+        transform: translateY(1px) scale(0.98);
+        box-shadow:
+          inset 0 4px 8px rgba(0, 0, 0, 0.4),
+          inset 0 -4px 8px rgba(255, 255, 255, 0.05),
+          0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      // Special styling for the third button (Rolls-Royce button)
+      &.btn-3 {
+        // Slightly different metallic finish
+        background: linear-gradient(145deg, #0f0f0f, #050505);
+        border-image: linear-gradient(45deg, #b8b8b8, #f0f0f0, #b8b8b8) 1;
+
+        &:hover, &:focus-visible {
+          box-shadow:
+            inset 0 2px 4px rgba(255, 255, 255, 0.1),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+            0 8px 16px rgba(184, 184, 184, 0.25),
+            0 0 25px rgba(240, 240, 240, 0.15);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 60vh;
+    padding: 2.5rem 1rem;
+
+    .article-hero {
+      h1 { font-size: 1.8rem; }
+      .discoverHero { font-size: 1rem; }
     }
 
-    .btn-1 {
-      border: none;
-      background-color: $secondary-color;
-      color: $primary-color;
-    }
+    .hero-cta {
+      flex-direction: column;
+      gap: 0.75rem;
 
-    .btn-2 {
-      border: solid $border-color;
-      background-color: transparent;
-      color: $secondary-color;
+      button {
+        width: 100%;
+        max-width: 320px;
+      }
     }
+  }
+
+  @keyframes hero-rise {
+    0% { transform: translateY(0); }
+    60% { transform: translateY(-26px); }
+    100% { transform: translateY(-16px); }
   }
 }

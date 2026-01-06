@@ -17,7 +17,7 @@ L.Icon.Default.mergeOptions({
 
 export default function Contact() {
   return (
-    <section className="contact-section">
+    <section id="contact-section" className="contact-section">
       <div className="contact-container">
         <ContactForm />
         <ContactDetails />
